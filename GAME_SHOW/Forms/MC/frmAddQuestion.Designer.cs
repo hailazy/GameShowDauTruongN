@@ -100,6 +100,7 @@
             this.rdoAnswer4.TabIndex = 0;
             this.rdoAnswer4.TabStop = true;
             this.rdoAnswer4.UseVisualStyleBackColor = true;
+            this.rdoAnswer4.CheckedChanged += new System.EventHandler(this.rdoAnswer4_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -132,6 +133,7 @@
             this.rdoAnswer3.TabIndex = 0;
             this.rdoAnswer3.TabStop = true;
             this.rdoAnswer3.UseVisualStyleBackColor = true;
+            this.rdoAnswer3.CheckedChanged += new System.EventHandler(this.rdoAnswer3_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -164,6 +166,7 @@
             this.rdoAnswer2.TabIndex = 0;
             this.rdoAnswer2.TabStop = true;
             this.rdoAnswer2.UseVisualStyleBackColor = true;
+            this.rdoAnswer2.CheckedChanged += new System.EventHandler(this.rdoAnswer2_CheckedChanged);
             // 
             // grpSingleAnswers1
             // 
@@ -196,6 +199,7 @@
             this.rdoAnswer1.TabIndex = 0;
             this.rdoAnswer1.TabStop = true;
             this.rdoAnswer1.UseVisualStyleBackColor = true;
+            this.rdoAnswer1.CheckedChanged += new System.EventHandler(this.rdoAnswer1_CheckedChanged);
             // 
             // txtQuestion
             // 
@@ -217,6 +221,7 @@
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnThoat
             // 
