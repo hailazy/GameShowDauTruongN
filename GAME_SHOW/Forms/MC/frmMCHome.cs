@@ -43,7 +43,7 @@ namespace GAME_SHOW.Forms
 
         private void OpenFromAddQuestion(object obj)
         {
-            Application.Run(new frmAddQuestion());
+            Application.Run(new frmAddQuestion(userInfo));
         }
     }
 }

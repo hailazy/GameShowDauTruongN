@@ -45,13 +45,13 @@ namespace GAME_SHOW.Services
             }
         }
 
-        public static bool AddQuestion(string email, string fullName, string role, string password, string rePassword)
+        public static bool AddQuestion(string userId, string content, string answerA, string answerB, string answerC, string answerD, int rightAnswer)
         {
             using (client)
             {
-                var account = new Account(email, fullName, role, password, rePassword);
+                var question = new Question(userId, content, answerA, answerB, answerC, answerD, rightAnswer);
                 client.BaseAddress = new Uri(URL);
-                var result = client.PostAsJsonAsync("auth/sign-up", account);
+                var result = client.PostAsJsonAsync("auth/sign-up", question);
                 result.Wait();
 
                 var data = result.Result.Content.ReadAsStringAsync().GetAwaiter().GetResult();
