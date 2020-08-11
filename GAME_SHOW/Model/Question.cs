@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace GAME_SHOW.Model
 {
-    class Question
+    public class Question
     {
+        public int Id { get; set; }
         public string content { get; set; }
         public string answerA { get; set; }
         public string answerB { get; set; }

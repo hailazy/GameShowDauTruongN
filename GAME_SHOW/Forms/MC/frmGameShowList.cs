@@ -14,7 +14,13 @@ namespace GAME_SHOW.Forms.MC
     {
         public frmGameShowList()
         {
+
             InitializeComponent();
+        }
+
+        private void frmGameShowList_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

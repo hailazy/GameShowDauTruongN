@@ -73,7 +73,7 @@ namespace GAME_SHOW.Forms
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Đã xảy ra vấn đề, vui lòng thử lại!", "Thông Báo");
             }
