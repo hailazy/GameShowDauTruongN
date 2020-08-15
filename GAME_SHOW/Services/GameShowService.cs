@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace GAME_SHOW.Services
 {
-    class GameShowService
+    public class GameShowService
     {
-        public bool Start(string name)
+        public bool Start(string gameShowId)
         {
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
-                var result = client.GetStringAsync($"gameshow/start/{name}");
+                var result = client.GetStringAsync($"gameshow/start/{gameShowId}");
                 result.Wait();
                 var data = result.Result;
 
@@ -24,12 +24,12 @@ namespace GAME_SHOW.Services
             }
         }
 
-        public string Open()
+        public string Open(string name)
         {
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
-                var result = client.GetStringAsync($"gameshow/open");
+                var result = client.GetStringAsync($"gameshow/open/{name}");
                 result.Wait();
                 var data = result.Result;
 

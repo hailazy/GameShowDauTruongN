@@ -16,18 +16,16 @@ namespace GAME_SHOW.Forms.MC
     {
         private QuestionService questionService = new QuestionService();
         private GameShowService gameShowService = new GameShowService();
-        private List<Question> list;
         private string gameShowId = "";
-        public frmControlGame()
+        public frmControlGame(string _gameShowId)
         {
+            gameShowId = _gameShowId;
             InitializeComponent();
         }
 
         private void LoadData()
         {
-            list = questionService.GetQuestions(GlobalInfo.CurrentUser.id);
-            var tinyQuestions = list.Select(q => new TinyQuestion(q)).ToList();
-            questionList.DataSource = tinyQuestions;
+            questionList.DataSource = questionService.GetQuestions(GlobalInfo.CurrentUser.id).Select(q => new TinyQuestion(q)).ToList();
             joinedUsers.DataSource = gameShowService.GetJoinedUsers(gameShowId);
         }
 
@@ -38,12 +36,20 @@ namespace GAME_SHOW.Forms.MC
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var Id = questionList.SelectedRows[0].Cells["Id"].Value.ToString();
+            var idQuestion = questionList?.SelectedRows[0]?.Cells["Id"].Value.ToString();
+            var content = questionList?.SelectedRows[0]?.Cells["Content"].Value.ToString();
+            questionContent.Text = content;
+            var isSuccess = gameShowService.AddQuestion(gameShowId, idQuestion);
+            if (!isSuccess)
+            {
+                MessageBox.Show("Không thể thêm câu hỏi", "Thông Báo");
+                return;
+            }
         }
 
         private void frmControlGame_Load(object sender, EventArgs e)
@@ -58,13 +64,7 @@ namespace GAME_SHOW.Forms.MC
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(nameGameShow.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tên trước khi bắt đầu", "Thông Báo");
-                return;
-            }
-
-            var isSuccess = gameShowService.Start(nameGameShow.Text);
+            var isSuccess = gameShowService.Start(gameShowId);
 
             if (!isSuccess)
             {
@@ -72,6 +72,29 @@ namespace GAME_SHOW.Forms.MC
                 return;
             }
             LoadData();
+            foreach (DataGridViewColumn item in questionList.Columns)
+            {
+                item.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            foreach (DataGridViewColumn item in joinedUsers.Columns)
+            {
+                item.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void frmControlGame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            gameShowService.Close(gameShowId);
         }
     }
 }

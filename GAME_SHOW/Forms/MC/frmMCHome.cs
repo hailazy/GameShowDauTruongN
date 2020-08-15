@@ -54,7 +54,7 @@ namespace GAME_SHOW.Forms
 
         private void btnMoCD_Click(object sender, EventArgs e)
         {
-            var frm = new frmControlGame();
+            var frm = new frmAddGameShow();
             frm.ShowDialog();
         }
     }

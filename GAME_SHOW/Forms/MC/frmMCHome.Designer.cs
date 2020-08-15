@@ -55,10 +55,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Green;
-            this.label2.Location = new System.Drawing.Point(428, 39);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(321, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 29);
+            this.label2.Size = new System.Drawing.Size(192, 25);
             this.label2.TabIndex = 9;
             this.label2.Text = "TRANG QUẢN LÝ ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,11 +70,9 @@
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(4, 4);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(257, 342);
+            this.groupBox3.Size = new System.Drawing.Size(193, 278);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             // 
@@ -87,20 +84,18 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblMCId);
             this.panel1.Controls.Add(this.lblFullName);
-            this.panel1.Location = new System.Drawing.Point(8, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(6, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(241, 262);
+            this.panel1.Size = new System.Drawing.Size(181, 213);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::GAME_SHOW.Properties.Resources.special_event_expo_09_512;
-            this.pictureBox2.Location = new System.Drawing.Point(61, 14);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(46, 11);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(121, 119);
+            this.pictureBox2.Size = new System.Drawing.Size(91, 97);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -109,10 +104,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 161);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(81, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 17);
+            this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID:";
             // 
@@ -120,10 +114,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 212);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(63, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 17);
+            this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Họ và tên:";
             // 
@@ -131,10 +124,9 @@
             // 
             this.lblMCId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.lblMCId.ForeColor = System.Drawing.Color.Red;
-            this.lblMCId.Location = new System.Drawing.Point(0, 177);
-            this.lblMCId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMCId.Location = new System.Drawing.Point(0, 144);
             this.lblMCId.Name = "lblMCId";
-            this.lblMCId.Size = new System.Drawing.Size(241, 25);
+            this.lblMCId.Size = new System.Drawing.Size(181, 20);
             this.lblMCId.TabIndex = 3;
             this.lblMCId.Text = "Id";
             this.lblMCId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,10 +135,9 @@
             // 
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.lblFullName.ForeColor = System.Drawing.Color.Red;
-            this.lblFullName.Location = new System.Drawing.Point(0, 228);
-            this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFullName.Location = new System.Drawing.Point(0, 185);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(241, 25);
+            this.lblFullName.Size = new System.Drawing.Size(181, 20);
             this.lblFullName.TabIndex = 3;
             this.lblFullName.Text = "Lớn Văn Lên";
             this.lblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,10 +149,9 @@
             this.btnSignOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignOut.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnSignOut.Location = new System.Drawing.Point(8, 281);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignOut.Location = new System.Drawing.Point(6, 228);
             this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(241, 46);
+            this.btnSignOut.Size = new System.Drawing.Size(181, 37);
             this.btnSignOut.TabIndex = 3;
             this.btnSignOut.Text = "Đăng Xuất";
             this.btnSignOut.UseVisualStyleBackColor = false;
@@ -173,11 +163,9 @@
             this.groupBox2.Controls.Add(this.btnDsCDMo);
             this.groupBox2.Controls.Add(this.btnMoCD);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(544, 118);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(408, 96);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(259, 228);
+            this.groupBox2.Size = new System.Drawing.Size(194, 185);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin Game show";
@@ -189,10 +177,9 @@
             this.btnDsCDMo.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnDsCDMo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDsCDMo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDsCDMo.Location = new System.Drawing.Point(20, 121);
-            this.btnDsCDMo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDsCDMo.Location = new System.Drawing.Point(15, 98);
             this.btnDsCDMo.Name = "btnDsCDMo";
-            this.btnDsCDMo.Size = new System.Drawing.Size(221, 62);
+            this.btnDsCDMo.Size = new System.Drawing.Size(166, 50);
             this.btnDsCDMo.TabIndex = 3;
             this.btnDsCDMo.Text = "Danh sách game show của tôi";
             this.btnDsCDMo.UseVisualStyleBackColor = false;
@@ -204,12 +191,11 @@
             this.btnMoCD.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnMoCD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoCD.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMoCD.Location = new System.Drawing.Point(20, 37);
-            this.btnMoCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMoCD.Location = new System.Drawing.Point(15, 30);
             this.btnMoCD.Name = "btnMoCD";
-            this.btnMoCD.Size = new System.Drawing.Size(221, 62);
+            this.btnMoCD.Size = new System.Drawing.Size(166, 50);
             this.btnMoCD.TabIndex = 0;
-            this.btnMoCD.Text = "Bắt đầu game show";
+            this.btnMoCD.Text = "Tạo game show";
             this.btnMoCD.UseVisualStyleBackColor = false;
             this.btnMoCD.Click += new System.EventHandler(this.btnMoCD_Click);
             // 
@@ -219,11 +205,9 @@
             this.groupBox1.Controls.Add(this.btnDsSV);
             this.groupBox1.Controls.Add(this.btnAddQuestion);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(285, 118);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(214, 96);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(233, 228);
+            this.groupBox1.Size = new System.Drawing.Size(175, 185);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Lý Câu hỏi";
@@ -235,10 +219,9 @@
             this.btnDsSV.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnDsSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDsSV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDsSV.Location = new System.Drawing.Point(24, 121);
-            this.btnDsSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDsSV.Location = new System.Drawing.Point(18, 98);
             this.btnDsSV.Name = "btnDsSV";
-            this.btnDsSV.Size = new System.Drawing.Size(199, 62);
+            this.btnDsSV.Size = new System.Drawing.Size(149, 50);
             this.btnDsSV.TabIndex = 1;
             this.btnDsSV.Text = "Xem danh sách câu hỏi";
             this.btnDsSV.UseVisualStyleBackColor = false;
@@ -251,10 +234,9 @@
             this.btnAddQuestion.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnAddQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddQuestion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddQuestion.Location = new System.Drawing.Point(24, 37);
-            this.btnAddQuestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddQuestion.Location = new System.Drawing.Point(18, 30);
             this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(199, 62);
+            this.btnAddQuestion.Size = new System.Drawing.Size(149, 50);
             this.btnAddQuestion.TabIndex = 0;
             this.btnAddQuestion.Text = "Thêm câu hỏi";
             this.btnAddQuestion.UseVisualStyleBackColor = false;
@@ -262,14 +244,13 @@
             // 
             // frmMCHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 351);
+            this.ClientSize = new System.Drawing.Size(611, 285);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMCHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MC HOME";
