@@ -125,7 +125,9 @@
       <DependentUpon>frmPlayGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\GameShow.cs" />
     <Compile Include="Model\QuestionGameShow.cs" />
+    <Compile Include="Model\UserGameShow.cs" />
     <Compile Include="Model\UserJoinGameShow.cs" />
     <Compile Include="Model\UserDoneQuestion.cs" />
     <Compile Include="Model\GlobalInfo.cs" />
@@ -162,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MC\frmQuestionsList.resx">
       <DependentUpon>frmQuestionsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PLAYER\frmFindGame.resx">
+      <DependentUpon>frmFindGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PLAYER\frmPlayerHome.resx">
       <DependentUpon>frmPlayerHome.cs</DependentUpon>

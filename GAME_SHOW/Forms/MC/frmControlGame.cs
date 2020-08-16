@@ -94,6 +94,10 @@ namespace GAME_SHOW.Forms.MC
 
         private void frmControlGame_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void frmControlGame_FormClosed(object sender, FormClosedEventArgs e)
+        {
             gameShowService.Close(gameShowId);
         }
     }

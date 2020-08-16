@@ -207,6 +207,7 @@
             this.Name = "frmControlGame";
             this.Text = "frmControlGame";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmControlGame_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmControlGame_FormClosed);
             this.Load += new System.EventHandler(this.frmControlGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.questionList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.joinedUsers)).EndInit();

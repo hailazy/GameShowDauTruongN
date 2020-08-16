@@ -45,10 +45,26 @@ namespace GAME_SHOW.Services
                 result.Wait();
                 var data = result.Result;
 
-                return JsonConvert.DeserializeObject<List<UserJoinGameShow>>(data); ;
+                return JsonConvert.DeserializeObject<List<UserJoinGameShow>>(data); 
             }
         }
+        public bool Join(string userId, string gameShowId)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
+                var model = new UserGameShow
+                {
+                    UserId = Int32.Parse(userId),
+                    GameshowId = Int32.Parse(gameShowId)
+                };
+                var result = client.PostAsJsonAsync($"gameshow/join", model);
+                result.Wait();
+                var data = result.Result.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
+                return data.Contains("Ok");
+            }
+        }
         public bool Close(string gameShowId)
         {
             using (var client = new HttpClient())
@@ -77,6 +93,19 @@ namespace GAME_SHOW.Services
                 var data = result.Result.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
                 return data.Contains("Ok");
+            }
+        }
+
+        public List<GameShow> Find() 
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
+                var result = client.GetStringAsync($"gameshow/find");
+                result.Wait();
+                var data = result.Result;
+
+                return JsonConvert.DeserializeObject<List<GameShow>>(data);
             }
         }
     }
