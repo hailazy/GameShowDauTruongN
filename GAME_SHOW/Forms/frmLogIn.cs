@@ -52,7 +52,7 @@ namespace GAME_SHOW.Forms
                     thread.Start();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Tên Đăng Nhập Hoặc Mật Khẩu Không Đúng", "Thông Báo");
             }
