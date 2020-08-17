@@ -195,8 +195,9 @@
             this.btnMoCD.Name = "btnMoCD";
             this.btnMoCD.Size = new System.Drawing.Size(166, 50);
             this.btnMoCD.TabIndex = 0;
-            this.btnMoCD.Text = "Đặt lịch game show";
+            this.btnMoCD.Text = "Tạo game show";
             this.btnMoCD.UseVisualStyleBackColor = false;
+            this.btnMoCD.Click += new System.EventHandler(this.btnMoCD_Click);
             // 
             // groupBox1
             // 
@@ -224,6 +225,7 @@
             this.btnDsSV.TabIndex = 1;
             this.btnDsSV.Text = "Xem danh sách câu hỏi";
             this.btnDsSV.UseVisualStyleBackColor = false;
+            this.btnDsSV.Click += new System.EventHandler(this.btnDsSV_Click);
             // 
             // btnAddQuestion
             // 

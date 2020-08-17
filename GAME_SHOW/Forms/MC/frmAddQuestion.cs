@@ -15,10 +15,44 @@ namespace GAME_SHOW.Forms.MC
     public partial class frmAddQuestion : Form
     {
         User userInfo;
+        Question question = null;
+        QuestionService questionService = new QuestionService(); 
         public frmAddQuestion(User user)
         {
             InitializeComponent();
             userInfo = user;
+        }
+        public frmAddQuestion(Question _question)
+        {
+            InitializeComponent();
+            question = _question;
+        }
+
+        private void LoadData()
+        {
+            txtQuestion.Text = question.content;
+            txtAnswer1.Text = question.answerA;
+            txtAnswer2.Text = question.answerB;
+            txtAnswer3.Text = question.answerC;
+            txtAnswer4.Text = question.answerD;
+
+            switch (question.rightAnswer)
+            {
+                case 1:
+                    rdoAnswer1.Checked = true;
+                    break;
+                case 2:
+                    rdoAnswer2.Checked = true;
+                    break;
+                case 3:
+                    rdoAnswer3.Checked = true;
+                    break;
+                case 4:
+                    rdoAnswer4.Checked = true;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void frmAddQuestion_Load(object sender, EventArgs e)
@@ -32,6 +66,10 @@ namespace GAME_SHOW.Forms.MC
             txtAnswer2.Enabled = false;
             txtAnswer3.Enabled = false;
             txtAnswer4.Enabled = false;
+            if (question != null)
+            {
+                LoadData();
+            }
         }
 
         private void txtQuestion_TextChanged(object sender, EventArgs e)
@@ -82,6 +120,7 @@ namespace GAME_SHOW.Forms.MC
                 )
             {
                 MessageBox.Show("Vui lòng điền đầy đủ nội dung trước khi lưu", "Thông Báo");
+                return;
             }
 
             string content = txtQuestion.Text;
@@ -106,7 +145,8 @@ namespace GAME_SHOW.Forms.MC
 
             try
             {
-                bool result = APIService.AddQuestion(userInfo.id, content, answerA, answerB, answerC, answerD, rightAnswer);
+                bool result = question == null ? Add(content, answerA, answerB, answerC, answerD, rightAnswer) 
+                                               : Update(content, answerA, answerB, answerC, answerD, rightAnswer);
                 if (result == false)
                 {
                     MessageBox.Show("Vui lòng kiểm tra lại thông tin", "Thông Báo");
@@ -114,12 +154,29 @@ namespace GAME_SHOW.Forms.MC
                 else
                 {
                     MessageBox.Show("Lưu thành công", "Thông Báo");
+                    this.Close();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Đã xảy ra vấn đề, vui lòng thử lại!", "Thông Báo");
             }
+        }
+
+        public bool Add(string content, string answerA, string answerB, string answerC, string answerD, int rightAnswer) 
+        {
+            return APIService.AddQuestion(userInfo.id, content, answerA, answerB, answerC, answerD, rightAnswer);
+        }
+
+        public bool Update(string content, string answerA, string answerB, string answerC, string answerD, int rightAnswer)
+        {
+            question.content = content;
+            question.answerA = answerA;
+            question.answerB = answerB;
+            question.answerC = answerC;
+            question.answerD = answerD;
+            question.rightAnswer = rightAnswer;
+            return questionService.Update(question);
         }
 
         private void rdoAnswer1_CheckedChanged(object sender, EventArgs e)

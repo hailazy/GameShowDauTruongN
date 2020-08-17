@@ -30,5 +30,11 @@ namespace GAME_SHOW.Forms.PLAYER
         {
             this.Close();
         }
+
+        private void btnThemTKSV_Click(object sender, EventArgs e)
+        {
+            var frm = new frmFindGame();
+            frm.ShowDialog();
+        }
     }
 }

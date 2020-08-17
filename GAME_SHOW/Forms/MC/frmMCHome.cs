@@ -45,5 +45,17 @@ namespace GAME_SHOW.Forms
         {
             Application.Run(new frmAddQuestion(userInfo));
         }
+
+        private void btnDsSV_Click(object sender, EventArgs e)
+        {
+            var listfrm = new frmQuestionsList();
+            listfrm.ShowDialog();
+        }
+
+        private void btnMoCD_Click(object sender, EventArgs e)
+        {
+            var frm = new frmAddGameShow();
+            frm.ShowDialog();
+        }
     }
 }
