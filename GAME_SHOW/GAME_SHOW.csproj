@@ -125,26 +125,14 @@
       <DependentUpon>frmPlayGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Account.cs" />
-    <Compile Include="Model\GameShow.cs" />
-    <Compile Include="Model\QuestionGameShow.cs" />
-    <Compile Include="Model\UserGameShow.cs" />
-    <Compile Include="Model\UserJoinGameShow.cs" />
-    <Compile Include="Model\UserDoneQuestion.cs" />
-    <Compile Include="Model\GlobalInfo.cs" />
-    <Compile Include="Model\TinyQuestion.cs" />
     <Compile Include="Model\Question.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\APIService.cs" />
-    <Compile Include="Services\GameShowService.cs" />
-    <Compile Include="Services\QuestionService.cs" />
     <EmbeddedResource Include="Forms\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MC\frmAddGameShow.resx">
-      <DependentUpon>frmAddGameShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MC\frmAddQuestion.resx">
       <DependentUpon>frmAddQuestion.cs</DependentUpon>
@@ -153,23 +141,17 @@
     <EmbeddedResource Include="Forms\MC\frmControlGame.resx">
       <DependentUpon>frmControlGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MC\frmGameShowList.resx">
-      <DependentUpon>frmGameShowList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MC\frmMCHome.resx">
       <DependentUpon>frmMCHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MC\frmQuestionsList.resx">
-      <DependentUpon>frmQuestionsList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PLAYER\frmFindGame.resx">
-      <DependentUpon>frmFindGame.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PLAYER\frmPlayerHome.resx">
       <DependentUpon>frmPlayerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PLAYER\frmPlayGame.resx">
+      <DependentUpon>frmPlayGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
