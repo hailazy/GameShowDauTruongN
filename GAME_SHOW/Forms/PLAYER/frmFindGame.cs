@@ -1,4 +1,5 @@
-﻿using GAME_SHOW.Services;
+﻿using GAME_SHOW.Model;
+using GAME_SHOW.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,14 @@ namespace GAME_SHOW.Forms.PLAYER
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //gameShowService.Join()
+            var gameShowId = roomList?.SelectedRows[0]?.Cells["Id"].Value.ToString();
+            var isSuccess = gameShowService.Join(GlobalInfo.CurrentUser.id, gameShowId);
+            if (isSuccess)
+            {
+                var frm = new frmPlayGame(gameShowId);
+                frm.Show();
+                this.Close();
+            }
         }
     }
 }

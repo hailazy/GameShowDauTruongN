@@ -65,6 +65,39 @@ namespace GAME_SHOW.Services
                 return data.Contains("Ok");
             }
         }
+
+        public bool UpdateScore(string userId, string gameShowId,int score)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
+                var model = new UserGameShow
+                {
+                    UserId = Int32.Parse(userId),
+                    GameshowId = Int32.Parse(gameShowId),
+                    Score = score
+                };
+                var result = client.PostAsJsonAsync($"gameshow/update-score", model);
+                result.Wait();
+                var data = result.Result.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+
+                return data.Contains("Ok");
+            }
+        }
+
+        public bool IsOnline(string gameShowId)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
+                var result = client.GetStringAsync($"gameshow/is-online/{gameShowId}");
+                result.Wait();
+                var data = result.Result;
+
+                return data.Contains("Ok");
+            }
+        }
+
         public bool Close(string gameShowId)
         {
             using (var client = new HttpClient())

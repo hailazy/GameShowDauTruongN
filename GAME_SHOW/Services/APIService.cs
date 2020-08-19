@@ -13,14 +13,12 @@ namespace GAME_SHOW.Services
 {
     public class APIService
     {
-        static readonly string URL = "https://localhost:44317/api/";
-
         public static User Login(string email, string password)
         {
             using (var client = new HttpClient())
             {
                 var account = new Account(email, password);
-                client.BaseAddress = new Uri(URL);
+                client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
                 var result = client.PostAsJsonAsync("auth/login", account);
                 result.Wait();
 
@@ -36,7 +34,7 @@ namespace GAME_SHOW.Services
             using (var client = new HttpClient())
             {
                 var account = new Account(email, fullName, role, password, rePassword );
-                client.BaseAddress = new Uri(URL);
+                client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
                 var result = client.PostAsJsonAsync("auth/sign-up", account);
                 result.Wait();
 
@@ -50,7 +48,7 @@ namespace GAME_SHOW.Services
             using (var client = new HttpClient())
             {
                 var question = new Question(userId, content, answerA, answerB, answerC, answerD, rightAnswer);
-                client.BaseAddress = new Uri(URL);
+                client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
                 var result = client.PostAsJsonAsync("question/add", question);
                 result.Wait();
                 var data = result.Result.Content.ReadAsStringAsync().GetAwaiter().GetResult();

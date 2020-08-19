@@ -16,10 +16,9 @@ namespace GAME_SHOW.Forms.MC
     {
         private QuestionService questionService = new QuestionService();
         private GameShowService gameShowService = new GameShowService();
-        private string gameShowId = "";
-        public frmControlGame(string _gameShowId)
+        private string gameShowId = GlobalInfo.gameShowId;
+        public frmControlGame()
         {
-            gameShowId = _gameShowId;
             InitializeComponent();
         }
 
@@ -89,11 +88,12 @@ namespace GAME_SHOW.Forms.MC
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            LoadData();
+            joinedUsers.DataSource = gameShowService.GetJoinedUsers(gameShowId);
         }
 
         private void frmControlGame_FormClosing(object sender, FormClosingEventArgs e)
         {
+            gameShowService.Close(gameShowId);
         }
 
         private void frmControlGame_FormClosed(object sender, FormClosedEventArgs e)

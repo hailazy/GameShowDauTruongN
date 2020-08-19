@@ -23,6 +23,21 @@ namespace GAME_SHOW.Services
                 return JsonConvert.DeserializeObject<List<Question>>(data); 
             }
         }
+
+        public Question GetCurrentQuestion(string gameShowId)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(GlobalInfo.BaseUrl);
+                var result = client.GetStringAsync($"question/get/{gameShowId}");
+                result.Wait();
+                var data = result.Result;
+                if (data.Contains("fail"))
+                    return null;
+                return JsonConvert.DeserializeObject<Question>(data);
+            }
+        }
+
         public void Delete(string id)
         {
             using (var client = new HttpClient())

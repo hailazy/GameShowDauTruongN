@@ -28,27 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.labelD = new System.Windows.Forms.Label();
-            this.rdoAnswer4 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.labelC = new System.Windows.Forms.Label();
-            this.rdoAnswer3 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblB = new System.Windows.Forms.Label();
-            this.rdoAnswer2 = new System.Windows.Forms.RadioButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.grpSingleAnswers1 = new System.Windows.Forms.GroupBox();
+            this.rdoA = new System.Windows.Forms.RadioButton();
             this.lblA = new System.Windows.Forms.Label();
-            this.rdoAnswer1 = new System.Windows.Forms.RadioButton();
+            this.lblD = new System.Windows.Forms.Label();
+            this.rdoD = new System.Windows.Forms.RadioButton();
+            this.lblC = new System.Windows.Forms.Label();
+            this.rdoC = new System.Windows.Forms.RadioButton();
+            this.lblB = new System.Windows.Forms.Label();
+            this.rdoB = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.userScore = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.grpSingleAnswers1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +61,7 @@
             this.btnSubmit.TabIndex = 18;
             this.btnSubmit.Text = "Chốt";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnQuit
             // 
@@ -79,12 +78,11 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.SeaGreen;
+            this.groupBox3.Controls.Add(this.userScore);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.grpSingleAnswers1);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.groupBox2);
-            this.groupBox3.Controls.Add(this.groupBox1);
-            this.groupBox3.Controls.Add(this.grpSingleAnswers1);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Linen;
@@ -114,113 +112,41 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Câu hỏi:";
             // 
-            // groupBox4
+            // timer1
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.groupBox4.Controls.Add(this.labelD);
-            this.groupBox4.Controls.Add(this.rdoAnswer4);
-            this.groupBox4.ForeColor = System.Drawing.Color.PeachPuff;
-            this.groupBox4.Location = new System.Drawing.Point(54, 332);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(571, 69);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            // 
-            // labelD
-            // 
-            this.labelD.AutoSize = true;
-            this.labelD.Location = new System.Drawing.Point(26, 19);
-            this.labelD.Name = "labelD";
-            this.labelD.Size = new System.Drawing.Size(86, 13);
-            this.labelD.TabIndex = 1;
-            this.labelD.Text = "Câu này đúng";
-            // 
-            // rdoAnswer4
-            // 
-            this.rdoAnswer4.AutoSize = true;
-            this.rdoAnswer4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.rdoAnswer4.Location = new System.Drawing.Point(6, 19);
-            this.rdoAnswer4.Name = "rdoAnswer4";
-            this.rdoAnswer4.Size = new System.Drawing.Size(14, 13);
-            this.rdoAnswer4.TabIndex = 0;
-            this.rdoAnswer4.TabStop = true;
-            this.rdoAnswer4.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.groupBox2.Controls.Add(this.labelC);
-            this.groupBox2.Controls.Add(this.rdoAnswer3);
-            this.groupBox2.ForeColor = System.Drawing.Color.PeachPuff;
-            this.groupBox2.Location = new System.Drawing.Point(54, 257);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(571, 69);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            // 
-            // labelC
-            // 
-            this.labelC.AutoSize = true;
-            this.labelC.Location = new System.Drawing.Point(26, 19);
-            this.labelC.Name = "labelC";
-            this.labelC.Size = new System.Drawing.Size(86, 13);
-            this.labelC.TabIndex = 1;
-            this.labelC.Text = "Câu này đúng";
-            // 
-            // rdoAnswer3
-            // 
-            this.rdoAnswer3.AutoSize = true;
-            this.rdoAnswer3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.rdoAnswer3.Location = new System.Drawing.Point(6, 19);
-            this.rdoAnswer3.Name = "rdoAnswer3";
-            this.rdoAnswer3.Size = new System.Drawing.Size(14, 13);
-            this.rdoAnswer3.TabIndex = 0;
-            this.rdoAnswer3.TabStop = true;
-            this.rdoAnswer3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.groupBox1.Controls.Add(this.lblB);
-            this.groupBox1.Controls.Add(this.rdoAnswer2);
-            this.groupBox1.ForeColor = System.Drawing.Color.PeachPuff;
-            this.groupBox1.Location = new System.Drawing.Point(54, 182);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(571, 69);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            // 
-            // lblB
-            // 
-            this.lblB.AutoSize = true;
-            this.lblB.Location = new System.Drawing.Point(26, 19);
-            this.lblB.Name = "lblB";
-            this.lblB.Size = new System.Drawing.Size(86, 13);
-            this.lblB.TabIndex = 1;
-            this.lblB.Text = "Câu này đúng";
-            // 
-            // rdoAnswer2
-            // 
-            this.rdoAnswer2.AutoSize = true;
-            this.rdoAnswer2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.rdoAnswer2.Location = new System.Drawing.Point(6, 19);
-            this.rdoAnswer2.Name = "rdoAnswer2";
-            this.rdoAnswer2.Size = new System.Drawing.Size(14, 13);
-            this.rdoAnswer2.TabIndex = 0;
-            this.rdoAnswer2.TabStop = true;
-            this.rdoAnswer2.UseVisualStyleBackColor = true;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // grpSingleAnswers1
             // 
             this.grpSingleAnswers1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.grpSingleAnswers1.Controls.Add(this.lblB);
+            this.grpSingleAnswers1.Controls.Add(this.rdoB);
+            this.grpSingleAnswers1.Controls.Add(this.lblC);
+            this.grpSingleAnswers1.Controls.Add(this.rdoC);
+            this.grpSingleAnswers1.Controls.Add(this.lblD);
+            this.grpSingleAnswers1.Controls.Add(this.rdoD);
             this.grpSingleAnswers1.Controls.Add(this.lblA);
-            this.grpSingleAnswers1.Controls.Add(this.rdoAnswer1);
+            this.grpSingleAnswers1.Controls.Add(this.rdoA);
             this.grpSingleAnswers1.ForeColor = System.Drawing.Color.PeachPuff;
-            this.grpSingleAnswers1.Location = new System.Drawing.Point(54, 107);
+            this.grpSingleAnswers1.Location = new System.Drawing.Point(54, 79);
             this.grpSingleAnswers1.Name = "grpSingleAnswers1";
-            this.grpSingleAnswers1.Size = new System.Drawing.Size(571, 69);
+            this.grpSingleAnswers1.Size = new System.Drawing.Size(571, 353);
             this.grpSingleAnswers1.TabIndex = 1;
             this.grpSingleAnswers1.TabStop = false;
+            // 
+            // rdoA
+            // 
+            this.rdoA.AutoSize = true;
+            this.rdoA.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.rdoA.Location = new System.Drawing.Point(6, 19);
+            this.rdoA.Name = "rdoA";
+            this.rdoA.Size = new System.Drawing.Size(14, 13);
+            this.rdoA.TabIndex = 0;
+            this.rdoA.TabStop = true;
+            this.rdoA.UseVisualStyleBackColor = true;
+            this.rdoA.CheckedChanged += new System.EventHandler(this.rdoAnswer1_CheckedChanged);
             // 
             // lblA
             // 
@@ -231,16 +157,87 @@
             this.lblA.TabIndex = 1;
             this.lblA.Text = "Câu này đúng";
             // 
-            // rdoAnswer1
+            // lblD
             // 
-            this.rdoAnswer1.AutoSize = true;
-            this.rdoAnswer1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.rdoAnswer1.Location = new System.Drawing.Point(6, 19);
-            this.rdoAnswer1.Name = "rdoAnswer1";
-            this.rdoAnswer1.Size = new System.Drawing.Size(14, 13);
-            this.rdoAnswer1.TabIndex = 0;
-            this.rdoAnswer1.TabStop = true;
-            this.rdoAnswer1.UseVisualStyleBackColor = true;
+            this.lblD.AutoSize = true;
+            this.lblD.Location = new System.Drawing.Point(26, 302);
+            this.lblD.Name = "lblD";
+            this.lblD.Size = new System.Drawing.Size(86, 13);
+            this.lblD.TabIndex = 3;
+            this.lblD.Text = "Câu này đúng";
+            // 
+            // rdoD
+            // 
+            this.rdoD.AutoSize = true;
+            this.rdoD.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.rdoD.Location = new System.Drawing.Point(6, 302);
+            this.rdoD.Name = "rdoD";
+            this.rdoD.Size = new System.Drawing.Size(14, 13);
+            this.rdoD.TabIndex = 2;
+            this.rdoD.TabStop = true;
+            this.rdoD.UseVisualStyleBackColor = true;
+            this.rdoD.CheckedChanged += new System.EventHandler(this.rdoD_CheckedChanged);
+            // 
+            // lblC
+            // 
+            this.lblC.AutoSize = true;
+            this.lblC.Location = new System.Drawing.Point(26, 204);
+            this.lblC.Name = "lblC";
+            this.lblC.Size = new System.Drawing.Size(86, 13);
+            this.lblC.TabIndex = 5;
+            this.lblC.Text = "Câu này đúng";
+            this.lblC.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // rdoC
+            // 
+            this.rdoC.AutoSize = true;
+            this.rdoC.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.rdoC.Location = new System.Drawing.Point(6, 204);
+            this.rdoC.Name = "rdoC";
+            this.rdoC.Size = new System.Drawing.Size(14, 13);
+            this.rdoC.TabIndex = 4;
+            this.rdoC.TabStop = true;
+            this.rdoC.UseVisualStyleBackColor = true;
+            this.rdoC.CheckedChanged += new System.EventHandler(this.rdoC_CheckedChanged);
+            // 
+            // lblB
+            // 
+            this.lblB.AutoSize = true;
+            this.lblB.Location = new System.Drawing.Point(26, 107);
+            this.lblB.Name = "lblB";
+            this.lblB.Size = new System.Drawing.Size(86, 13);
+            this.lblB.TabIndex = 7;
+            this.lblB.Text = "Câu này đúng";
+            // 
+            // rdoB
+            // 
+            this.rdoB.AutoSize = true;
+            this.rdoB.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.rdoB.Location = new System.Drawing.Point(6, 107);
+            this.rdoB.Name = "rdoB";
+            this.rdoB.Size = new System.Drawing.Size(14, 13);
+            this.rdoB.TabIndex = 6;
+            this.rdoB.TabStop = true;
+            this.rdoB.UseVisualStyleBackColor = true;
+            this.rdoB.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(51, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Điểm của bạn";
+            // 
+            // userScore
+            // 
+            this.userScore.AutoSize = true;
+            this.userScore.Location = new System.Drawing.Point(142, 54);
+            this.userScore.Name = "userScore";
+            this.userScore.Size = new System.Drawing.Size(14, 13);
+            this.userScore.TabIndex = 4;
+            this.userScore.Text = "0";
             // 
             // frmPlayGame
             // 
@@ -252,14 +249,9 @@
             this.Controls.Add(this.groupBox3);
             this.Name = "frmPlayGame";
             this.Text = "frmPlayGame";
+            this.Load += new System.EventHandler(this.frmPlayGame_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.grpSingleAnswers1.ResumeLayout(false);
             this.grpSingleAnswers1.PerformLayout();
             this.ResumeLayout(false);
@@ -273,17 +265,17 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label labelD;
-        private System.Windows.Forms.RadioButton rdoAnswer4;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label labelC;
-        private System.Windows.Forms.RadioButton rdoAnswer3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblB;
-        private System.Windows.Forms.RadioButton rdoAnswer2;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.GroupBox grpSingleAnswers1;
+        private System.Windows.Forms.Label lblB;
+        private System.Windows.Forms.RadioButton rdoB;
+        private System.Windows.Forms.Label lblC;
+        private System.Windows.Forms.RadioButton rdoC;
+        private System.Windows.Forms.Label lblD;
+        private System.Windows.Forms.RadioButton rdoD;
         private System.Windows.Forms.Label lblA;
-        private System.Windows.Forms.RadioButton rdoAnswer1;
+        private System.Windows.Forms.RadioButton rdoA;
+        private System.Windows.Forms.Label userScore;
+        private System.Windows.Forms.Label label3;
     }
 }
