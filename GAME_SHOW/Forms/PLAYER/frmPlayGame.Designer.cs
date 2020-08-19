@@ -32,20 +32,20 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.userScore = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.grpSingleAnswers1 = new System.Windows.Forms.GroupBox();
+            this.lblB = new System.Windows.Forms.Label();
+            this.rdoB = new System.Windows.Forms.RadioButton();
+            this.lblC = new System.Windows.Forms.Label();
+            this.rdoC = new System.Windows.Forms.RadioButton();
+            this.lblD = new System.Windows.Forms.Label();
+            this.rdoD = new System.Windows.Forms.RadioButton();
+            this.lblA = new System.Windows.Forms.Label();
+            this.rdoA = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.grpSingleAnswers1 = new System.Windows.Forms.GroupBox();
-            this.rdoA = new System.Windows.Forms.RadioButton();
-            this.lblA = new System.Windows.Forms.Label();
-            this.lblD = new System.Windows.Forms.Label();
-            this.rdoD = new System.Windows.Forms.RadioButton();
-            this.lblC = new System.Windows.Forms.Label();
-            this.rdoC = new System.Windows.Forms.RadioButton();
-            this.lblB = new System.Windows.Forms.Label();
-            this.rdoB = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.userScore = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.grpSingleAnswers1.SuspendLayout();
             this.SuspendLayout();
@@ -93,30 +93,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Question";
             // 
-            // label2
+            // userScore
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(111, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Câu trả lời nào sau đây đúng";
+            this.userScore.AutoSize = true;
+            this.userScore.Location = new System.Drawing.Point(142, 54);
+            this.userScore.Name = "userScore";
+            this.userScore.Size = new System.Drawing.Size(14, 13);
+            this.userScore.TabIndex = 4;
+            this.userScore.Text = "0";
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Câu hỏi:";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(51, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Điểm của bạn";
             // 
             // grpSingleAnswers1
             // 
@@ -136,47 +129,26 @@
             this.grpSingleAnswers1.TabIndex = 1;
             this.grpSingleAnswers1.TabStop = false;
             // 
-            // rdoA
+            // lblB
             // 
-            this.rdoA.AutoSize = true;
-            this.rdoA.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.rdoA.Location = new System.Drawing.Point(6, 19);
-            this.rdoA.Name = "rdoA";
-            this.rdoA.Size = new System.Drawing.Size(14, 13);
-            this.rdoA.TabIndex = 0;
-            this.rdoA.TabStop = true;
-            this.rdoA.UseVisualStyleBackColor = true;
-            this.rdoA.CheckedChanged += new System.EventHandler(this.rdoAnswer1_CheckedChanged);
+            this.lblB.AutoSize = true;
+            this.lblB.Location = new System.Drawing.Point(26, 107);
+            this.lblB.Name = "lblB";
+            this.lblB.Size = new System.Drawing.Size(86, 13);
+            this.lblB.TabIndex = 7;
+            this.lblB.Text = "Câu này đúng";
             // 
-            // lblA
+            // rdoB
             // 
-            this.lblA.AutoSize = true;
-            this.lblA.Location = new System.Drawing.Point(26, 19);
-            this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(86, 13);
-            this.lblA.TabIndex = 1;
-            this.lblA.Text = "Câu này đúng";
-            // 
-            // lblD
-            // 
-            this.lblD.AutoSize = true;
-            this.lblD.Location = new System.Drawing.Point(26, 302);
-            this.lblD.Name = "lblD";
-            this.lblD.Size = new System.Drawing.Size(86, 13);
-            this.lblD.TabIndex = 3;
-            this.lblD.Text = "Câu này đúng";
-            // 
-            // rdoD
-            // 
-            this.rdoD.AutoSize = true;
-            this.rdoD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.rdoD.Location = new System.Drawing.Point(6, 302);
-            this.rdoD.Name = "rdoD";
-            this.rdoD.Size = new System.Drawing.Size(14, 13);
-            this.rdoD.TabIndex = 2;
-            this.rdoD.TabStop = true;
-            this.rdoD.UseVisualStyleBackColor = true;
-            this.rdoD.CheckedChanged += new System.EventHandler(this.rdoD_CheckedChanged);
+            this.rdoB.AutoSize = true;
+            this.rdoB.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.rdoB.Location = new System.Drawing.Point(6, 107);
+            this.rdoB.Name = "rdoB";
+            this.rdoB.Size = new System.Drawing.Size(14, 13);
+            this.rdoB.TabIndex = 6;
+            this.rdoB.TabStop = true;
+            this.rdoB.UseVisualStyleBackColor = true;
+            this.rdoB.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // lblC
             // 
@@ -200,44 +172,72 @@
             this.rdoC.UseVisualStyleBackColor = true;
             this.rdoC.CheckedChanged += new System.EventHandler(this.rdoC_CheckedChanged);
             // 
-            // lblB
+            // lblD
             // 
-            this.lblB.AutoSize = true;
-            this.lblB.Location = new System.Drawing.Point(26, 107);
-            this.lblB.Name = "lblB";
-            this.lblB.Size = new System.Drawing.Size(86, 13);
-            this.lblB.TabIndex = 7;
-            this.lblB.Text = "Câu này đúng";
+            this.lblD.AutoSize = true;
+            this.lblD.Location = new System.Drawing.Point(26, 302);
+            this.lblD.Name = "lblD";
+            this.lblD.Size = new System.Drawing.Size(86, 13);
+            this.lblD.TabIndex = 3;
+            this.lblD.Text = "Câu này đúng";
             // 
-            // rdoB
+            // rdoD
             // 
-            this.rdoB.AutoSize = true;
-            this.rdoB.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.rdoB.Location = new System.Drawing.Point(6, 107);
-            this.rdoB.Name = "rdoB";
-            this.rdoB.Size = new System.Drawing.Size(14, 13);
-            this.rdoB.TabIndex = 6;
-            this.rdoB.TabStop = true;
-            this.rdoB.UseVisualStyleBackColor = true;
-            this.rdoB.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.rdoD.AutoSize = true;
+            this.rdoD.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.rdoD.Location = new System.Drawing.Point(6, 302);
+            this.rdoD.Name = "rdoD";
+            this.rdoD.Size = new System.Drawing.Size(14, 13);
+            this.rdoD.TabIndex = 2;
+            this.rdoD.TabStop = true;
+            this.rdoD.UseVisualStyleBackColor = true;
+            this.rdoD.CheckedChanged += new System.EventHandler(this.rdoD_CheckedChanged);
             // 
-            // label3
+            // lblA
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Điểm của bạn";
+            this.lblA.AutoSize = true;
+            this.lblA.Location = new System.Drawing.Point(26, 19);
+            this.lblA.Name = "lblA";
+            this.lblA.Size = new System.Drawing.Size(86, 13);
+            this.lblA.TabIndex = 1;
+            this.lblA.Text = "Câu này đúng";
             // 
-            // userScore
+            // rdoA
             // 
-            this.userScore.AutoSize = true;
-            this.userScore.Location = new System.Drawing.Point(142, 54);
-            this.userScore.Name = "userScore";
-            this.userScore.Size = new System.Drawing.Size(14, 13);
-            this.userScore.TabIndex = 4;
-            this.userScore.Text = "0";
+            this.rdoA.AutoSize = true;
+            this.rdoA.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.rdoA.Location = new System.Drawing.Point(6, 19);
+            this.rdoA.Name = "rdoA";
+            this.rdoA.Size = new System.Drawing.Size(14, 13);
+            this.rdoA.TabIndex = 0;
+            this.rdoA.TabStop = true;
+            this.rdoA.UseVisualStyleBackColor = true;
+            this.rdoA.CheckedChanged += new System.EventHandler(this.rdoAnswer1_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(111, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(238, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Câu trả lời nào sau đây đúng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(51, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Câu hỏi:";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmPlayGame
             // 

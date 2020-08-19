@@ -36,5 +36,10 @@ namespace GAME_SHOW.Forms.PLAYER
                 this.Close();
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            roomList.DataSource = gameShowService.Find();
+        }
     }
 }

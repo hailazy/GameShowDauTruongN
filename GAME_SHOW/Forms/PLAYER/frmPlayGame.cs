@@ -40,6 +40,13 @@ namespace GAME_SHOW.Forms.PLAYER
                 return;
             }
             isSubmit = true;
+            if (selectAnswer != question.rightAnswer)
+            {
+                MessageBox.Show($"Game show đã kết thúc,Số điểm của bạn là: {score}", "Thông Báo");
+                this.Close();
+                return;
+            }
+
             if (selectAnswer == question.rightAnswer)
                 score++;
             userScore.Text = score.ToString();
@@ -57,6 +64,7 @@ namespace GAME_SHOW.Forms.PLAYER
             if (_question == null)
                 return;
             var isOnline = gameShowService.IsOnline(gameShowId);
+
             if (!isOnline)
             {
                 MessageBox.Show($"Game show đã kết thúc,Số điểm của bạn là: {score}", "Thông Báo");
