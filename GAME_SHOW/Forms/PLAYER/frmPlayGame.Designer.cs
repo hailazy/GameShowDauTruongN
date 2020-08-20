@@ -78,8 +78,6 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.SeaGreen;
-            this.groupBox3.Controls.Add(this.userScore);
-            this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.grpSingleAnswers1);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
@@ -96,18 +94,18 @@
             // userScore
             // 
             this.userScore.AutoSize = true;
-            this.userScore.Location = new System.Drawing.Point(142, 54);
+            this.userScore.Location = new System.Drawing.Point(184, 486);
             this.userScore.Name = "userScore";
-            this.userScore.Size = new System.Drawing.Size(14, 13);
+            this.userScore.Size = new System.Drawing.Size(13, 13);
             this.userScore.TabIndex = 4;
             this.userScore.Text = "0";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 54);
+            this.label3.Location = new System.Drawing.Point(105, 486);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Điểm của bạn";
             // 
@@ -244,7 +242,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 517);
+            this.Controls.Add(this.userScore);
             this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.groupBox3);
             this.Name = "frmPlayGame";
@@ -255,6 +255,7 @@
             this.grpSingleAnswers1.ResumeLayout(false);
             this.grpSingleAnswers1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
